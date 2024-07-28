@@ -9,7 +9,9 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp LGUI &kp N1>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp LGUI>
                 , <&macro_release &kp LSHFT>
                 ;
         };
@@ -17,7 +19,7 @@
 };
 
 / {
-        keymap {
+        keymap {     
                 compatible = "zmk,keymap";
 
                 default_layer {
@@ -35,11 +37,11 @@
    &kp CAPS   &kp A     &kp S     &kp D      &kp F      &kp G                &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp RET
    &kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &kp B                &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
    &kp LCTRL  &trans  &kp APOS  &kp SPACE  &kp LALT   &kp LGUI             &kp SPACE  &mo 1   &kp LARW   &kp UARW  &kp DARW  &kp RARW
-                        >;
+                        >
                 };
                 lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |          |       |       |       |       |       | BTCLR |
+// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |          |       |       |       |       |       |       |
 // |       |       |       |       |       |       |          |       |       |       |       |       |       |
 // |       |   ~   |   _   | LPAR  | RPAR  |       |          |       | LBKT  | RBKT  |   -   |   =   |       |
 // |       |       |       |       |       |       |          |  BTT1 |  BTT2 |  BTT3 |       |       |       |
@@ -47,7 +49,7 @@
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
-   &trans &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4              &trans    &trans    &trans   &trans      &trans     &bt BT_CLR
+   &trans &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4              &trans    &trans    &trans   &trans      &trans     &trans
    &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &trans      &trans     &trans
    &trans    &kp TILDE      &kp UNDER      &kp LPAR       &kp RPAR       &trans                 &trans    &kp LBKT  &kp RBKT &kp MINUS   &kp EQUAL  &trans
    &trans    &trans         &trans         &trans         &trans         &trans                 &BTT_1    &trans    &trans   &trans      &trans     &trans
