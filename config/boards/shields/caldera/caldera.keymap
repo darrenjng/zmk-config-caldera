@@ -4,7 +4,7 @@
 
 / {
     macros {
-        btt_1: btt_1 {
+        BTT_1: BTT_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
