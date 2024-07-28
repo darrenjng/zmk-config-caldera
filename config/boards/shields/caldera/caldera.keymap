@@ -15,8 +15,97 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+        BTT_2: BTT_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        BTT_3: BTT_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp N3>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        BTT_4: BTT_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp N4>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        BTT_5: BTT_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp N5>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        BTT_6: BTT_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp N6>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        BTT_7: BTT_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp N7>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        BTT_8: BTT_8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp N8>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        BTT_9: BTT_9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp N9>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
     };
 };
+
 
 / {
         keymap {     
@@ -41,18 +130,18 @@
                 };
                 lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |          |       |       |       |       |       | BTCLR |
-// |       |       |       |       |       |       |          |       |       |       |       |       |       |
+// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |          |       |       |       |       |       |       |
+// |       |       |       |       |       |       |          |       |       |  BTT7 |  BTT8 |  BTT9 |       |
 // |       |   ~   |   _   | LPAR  | RPAR  |       |          |       | LBKT  | RBKT  |   -   |   =   |       |
-// |       |       |       |       |       |       |          |  BTT1 |  BTT2 |  BTT3 |       |       |       |
+// |       |       |       |       |       |       |          |  BTT1 |  BTT2 |  BTT3 |  BTT4 |  BTT5 |  BTT6 |
 // |       |       |       |       |       |       |          |       |   X   |       |  PREV | PAUSE |  NEXT |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
    &trans &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4              &trans    &trans    &trans   &trans      &trans     &trans
-   &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &trans      &trans     &trans
+   &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &trans    &BTT_7   &BTT_8      &BTT_9     &trans
    &trans    &kp TILDE      &kp UNDER      &kp LPAR       &kp RPAR       &trans                 &trans    &kp LBKT  &kp RBKT &kp MINUS   &kp EQUAL  &trans
-   &trans    &trans         &trans         &trans         &trans         &trans                 &BTT_1    &trans    &trans   &trans      &trans     &trans
+   &trans    &trans         &trans         &trans         &trans         &trans                 &BTT_1    &BTT_2    &BTT_3   &BTT_4      &BTT_5     &BTT_6
    &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &kp K_PREV  &kp K_PP   &kp K_NEXT
                         >;
                 };
