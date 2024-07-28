@@ -142,7 +142,7 @@
    &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &trans    &BTT_7   &BTT_8      &BTT_9     &trans
    &trans    &kp TILDE      &kp UNDER      &kp LPAR       &kp RPAR       &trans                 &trans    &kp LBKT  &kp RBKT &kp MINUS   &kp EQUAL  &trans
    &trans    &trans         &trans         &trans         &trans         &trans                 &BTT_1    &BTT_2    &BTT_3   &BTT_4      &BTT_5     &BTT_6
-   &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &kp K_PREV  &kp K_PP   &kp K_NEXT
+   &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &kp C_PREV  &kp C_PP   &kp C_NEXT
                         >;
                 };
         };
