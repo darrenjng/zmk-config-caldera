@@ -37,11 +37,11 @@
    &kp CAPS   &kp A     &kp S     &kp D      &kp F      &kp G                &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp RET
    &kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &kp B                &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
    &kp LCTRL  &trans  &kp APOS  &kp SPACE  &kp LALT   &kp LGUI             &kp SPACE  &mo 1   &kp LARW   &kp UARW  &kp DARW  &kp RARW
-                        >
+                        >;
                 };
                 lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |          |       |       |       |       |       |       |
+// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |          |       |       |       |       |       | BTCLR |
 // |       |       |       |       |       |       |          |       |       |       |       |       |       |
 // |       |   ~   |   _   | LPAR  | RPAR  |       |          |       | LBKT  | RBKT  |   -   |   =   |       |
 // |       |       |       |       |       |       |          |  BTT1 |  BTT2 |  BTT3 |       |       |       |
