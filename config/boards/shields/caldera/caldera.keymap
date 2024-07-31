@@ -157,11 +157,11 @@
 
                 default_layer {
 // ---------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U  |  I  |  O  |  P  |  \   |
-// | CAPS |  A  |  S  |  D  |  F  |  G  |     |  H  |  J  |  K  |  L  |  ;  |  ENT |  
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M  |  ,  |  .  |  /  | SHFT |
-// | CTRL | LOW |  '  | SPC | ALT | CMD |     | SPC | LOW |LARW |UARW |DARW | RARW |
+// |  ESC |  1  |  2  |  3  |  4  |  5  |-----|  6  |  7  |  8  |  9  |  0  | BKSP |
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |-----|  Y  |  U  |  I  |  O  |  P  |  \   |
+// | CAPS |  A  |  S  |  D  |  F  |  G  |-----|  H  |  J  |  K  |  L  |  ;  |  ENT |  
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |-----|  N  |  M  |  ,  |  .  |  /  | SHFT |
+// | CTRL | LOW |  '  | SPC | ALT | CMD |-----| SPC | LOW |LARW |UARW |DARW | RARW |
 // ---------------------------------------------------------------------------------
 
                         bindings = <
@@ -174,19 +174,28 @@
                 };
                 lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |          |       |       |       |       |       |       |    BTT Map
-// |       |       |       |       |       |       |          |       | VOL DN| VOL UP|       |       |       |    ---------
-// |       |   `   |   _   |  LPAR |  RPAR |   ~   |          |       |  BTT6 |  BTT7 |  BTT4 |  BTT9 |  BTT0 |    | MovScrnMax |  MovScrn | ScrnStCrop | MissCtrl | SplitEdge  |
-// |       |   -   |   =   |  LBKT |  RBKT |       |          |       |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |    | File       |  Outlook | VSCode     | Edge     | Zotero     |
-// |       |-------|       | BTT10 | BTT11 | BTT12 |          |       |-------|  PREV | PAUSE |  NEXT |       |
+// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |----------|       |       |       |       |       |       |    
+// |       |       |       |       |       |       |----------|       | VOL DN| VOL UP|       |       |       |    
+// |       |   `   |   _   |  LPAR |  RPAR |   ~   |----------|       |  BTT6 |  BTT7 |  BTT4 |  BTT9 |  BTT0 |    
+// |       |   -   |   =   |  LBKT |  RBKT |       |----------|       |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |    
+// |       |-------|       | BTT10 | BTT11 | BTT12 |----------|       |-------|  PREV | PAUSE |  NEXT |       |
 // ------------------------------------------------------------------------------------------------------------
+
+// BTT Map Right
+// --------------------------------------------------------------
+// | MovScrnMax |  MovScrn | ScrnStCrop | -------- | SplitEdge  |
+// | File       |  Outlook | VSCode     | Edge     | Zotero     |
+
+// BTT Map Left
+// --------------------------------------------------------------
+// | -------- | -------- | MissCtrl |
 
                         bindings = <
    &trans &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4              &trans    &trans        &trans        &trans     &trans       &trans
    &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans       &trans 
-   &trans    &kp GRAVE      &kp UNDER      &kp LPAR       &kp RPAR       &kp TILDE                 &trans    &BTT_6        &BTT_7        &BTT_4     &BTT_9       &BTT_0
+   &trans    &kp GRAVE      &kp UNDER      &kp LPAR       &kp RPAR       &kp TILDE              &trans    &BTT_6        &BTT_7        &BTT_4     &BTT_9       &BTT_0
    &trans    &kp MINUS      &kp EQUAL      &kp LBKT       &kp RBKT       &trans                 &trans    &BTT_1        &BTT_2        &BTT_3     &BTT_8       &BTT_5
-   &trans    &trans         &trans      &BTT_10        &BTT_11        &BTT_12                 &trans    &trans        &kp C_PREV    &kp C_PP   &kp C_NEXT   &trans
+   &trans    &trans         &trans         &BTT_10        &BTT_11        &BTT_12                &trans    &trans        &kp C_PREV    &kp C_PP   &kp C_NEXT   &trans
                         >;
                 };
         };
