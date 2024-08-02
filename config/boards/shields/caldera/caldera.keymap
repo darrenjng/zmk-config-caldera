@@ -147,6 +147,24 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+        zoom_in: zoom_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp EQUAL>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+        zoom_out: zoom_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp MINUS>
+                , <&macro_release &kp LCMD>
+                ;
+        };
     };
 };
 
@@ -178,7 +196,7 @@
 // |       |       |       |       |       |       |----------|       | VOL DN| VOL UP|       |       |       |    
 // |       |  LPAR |  RPAR |   -   |   =   |   ~   |----------|       |  BTT6 |  BTT4 |  BTT7 |  BTT9 |  BTT0 |    
 // |       |  LBKT |  RBKT |   _   |   +   |   `   |----------|       |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |    
-// |       |-------|       | BTT10 | BTT11 | BTT12 |----------|       |-------| PAUSE |  PREV |  NEXT |       |
+// |       |-------|ZM OUT | ZM IN | BTT11 | BTT12 |----------|       |-------| PAUSE |  PREV |  NEXT |       |
 // ------------------------------------------------------------------------------------------------------------
 
 // BTT Map Right
@@ -195,7 +213,7 @@
    &trans    &trans      &trans        &trans        &trans        &trans                 &trans    &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans         &trans 
    &trans    &kp LPAR    &kp RPAR      &kp MINUS     &kp EQUAL     &kp TILDE              &trans    &BTT_6        &BTT_4        &BTT_7     &BTT_9         &BTT_0
    &trans    &kp LBKT    &kp RBKT      &kp UNDER     &kp PLUS      &kp GRAVE              &trans    &BTT_1        &BTT_2        &BTT_3     &BTT_8         &BTT_5
-   &trans    &trans      &trans        &BTT_10       &BTT_11       &BTT_12                &trans    &trans        &kp C_PP      &kp C_PREV   &kp C_NEXT   &trans
+   &trans    &trans      &zoom_out     &zoom_in      &BTT_11       &BTT_12                &trans    &trans        &kp C_PP      &kp C_PREV   &kp C_NEXT   &trans
                         >;
                 };
         };
