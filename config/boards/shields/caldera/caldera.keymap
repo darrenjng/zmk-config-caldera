@@ -193,10 +193,10 @@
                 lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |----------|       |       |       |       |       |       |    
-// |       |       |       |       |       |       |----------|       | VOL DN| VOL UP|       |       |       |    
-// |       |  LPAR |  RPAR |   -   |   =   |   ~   |----------|       |  BTT6 |  BTT4 |  BTT7 |  BTT9 |  BTT0 |    
+// |SCRSTCP|       |       |       |       |       |----------|       | VOL DN| VOL UP|       |       |       |    
+// |       |  LPAR |  RPAR |   -   |   =   |   ~   |----------|       |  BTT6 |  BTT7 |  BTT9 |  BTT0 | BTT12 |    
 // |       |  LBKT |  RBKT |   _   |   +   |   `   |----------|       |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |    
-// |       |-------|ZM OUT | ZM IN | BTT11 | BTT12 |----------|       |-------| PAUSE |  PREV |  NEXT |       |
+// |       |-------|ZM OUT | ZM IN | BTT11 |       |----------|       |-------| PAUSE |  PREV |  NEXT |       |
 // ------------------------------------------------------------------------------------------------------------
 
 // BTT Map Right
@@ -206,14 +206,14 @@
 
 // BTT Map Left
 // --------------------------------------------------------------
-// | -------- | -------- | MissCtrl |
+// | Zoom In | Zoom Out | MissCtrl |
 
                         bindings = <
    &trans &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        &trans    &trans        &trans        &trans     &trans         &trans
-   &trans    &trans      &trans        &trans        &trans        &trans                 &trans    &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans         &trans 
-   &trans    &kp LPAR    &kp RPAR      &kp MINUS     &kp EQUAL     &kp TILDE              &trans    &BTT_6        &BTT_4        &BTT_7     &BTT_9         &BTT_0
-   &trans    &kp LBKT    &kp RBKT      &kp UNDER     &kp PLUS      &kp GRAVE              &trans    &BTT_1        &BTT_2        &BTT_3     &BTT_8         &BTT_5
-   &trans    &trans      &zoom_out     &zoom_in      &BTT_11       &BTT_12                &trans    &trans        &kp C_PP      &kp C_PREV   &kp C_NEXT   &trans
+   &BTT_4    &trans      &trans         &trans         &trans         &trans                 &trans    &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans         &trans 
+   &trans    &kp LPAR    &kp RPAR       &kp MINUS      &kp EQUAL      &kp TILDE              &trans    &BTT_6        &BTT_12        &BTT_7     &BTT_9         &BTT_0
+   &trans    &kp LBKT    &kp RBKT       &kp UNDER      &kp PLUS       &kp GRAVE              &trans    &BTT_1        &BTT_2        &BTT_3     &BTT_8         &BTT_5
+   &trans    &trans      &zoom_out      &zoom_in       &BTT_11        &trans                &trans    &trans        &kp C_PP      &kp C_PREV   &kp C_NEXT   &trans
                         >;
                 };
         };
