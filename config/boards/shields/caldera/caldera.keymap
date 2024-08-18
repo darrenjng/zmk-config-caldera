@@ -168,6 +168,9 @@
     };
 };
 
+&soft_off {
+    hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+};
 
 / {
         keymap {     
@@ -192,7 +195,7 @@
                 };
                 lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |----------|       |       |       |       |       |       |    
+// |SOFTOFF|  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |----------|       |       |       |       |       |       |    
 // |SCRSTCP|       |       |       |       |       |----------|       | VOL DN| VOL UP|       |       |       |    
 // |       |  LPAR |  RPAR |   -   |   =   |   ~   |----------|       |  BTT6 |  BTT7 |  BTT9 |  BTT0 | BTT12 |    
 // |       |  LBKT |  RBKT |   _   |   +   |   `   |----------|       |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |    
@@ -209,7 +212,7 @@
 // | Zoom In | Zoom Out | MissCtrl |
 
                         bindings = <
-   &trans &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        &trans    &trans        &trans        &trans     &trans         &trans
+   &soft_off &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        &trans    &trans        &trans        &trans     &trans         &trans
    &BTT_4    &trans      &trans         &trans         &trans         &trans                 &trans    &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans         &trans 
    &trans    &kp LPAR    &kp RPAR       &kp MINUS      &kp EQUAL      &kp TILDE              &trans    &BTT_6        &BTT_12        &BTT_7     &BTT_9         &BTT_0
    &trans    &kp LBKT    &kp RBKT       &kp UNDER      &kp PLUS       &kp GRAVE              &trans    &BTT_1        &BTT_2        &BTT_3     &BTT_8         &BTT_5
