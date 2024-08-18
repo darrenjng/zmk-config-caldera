@@ -214,7 +214,7 @@
 // | Zoom In | Zoom Out | MissCtrl |
 
                         bindings = <
-   &tog SHIFT_LEFT &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        &trans    &trans        &trans        &trans     &trans         &trans
+   &tog 2 &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        &trans    &trans        &trans        &trans     &trans         &trans
    &BTT_4           &trans      &trans         &trans         &trans         &trans                 &trans    &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans         &trans 
    &trans            &kp LPAR    &kp RPAR       &kp MINUS      &kp EQUAL      &kp TILDE              &trans    &BTT_6        &BTT_12        &BTT_7     &BTT_9         &BTT_0
    &trans           &kp LBKT    &kp RBKT       &kp UNDER      &kp PLUS       &kp GRAVE              &trans    &BTT_1        &BTT_2        &BTT_3     &BTT_8         &BTT_5
