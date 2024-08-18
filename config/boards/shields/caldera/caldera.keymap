@@ -190,12 +190,12 @@
    &kp TAB    &kp Q      &kp W     &kp E      &kp R      &kp T                &kp Y      &kp U   &kp I      &kp O     &kp P     &kp BSLH
    &kp CAPS   &kp A      &kp S     &kp D      &kp F      &kp G                &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp RET
    &kp LSHFT  &kp Z      &kp X     &kp C      &kp V      &kp B                &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-   &kp LCTRL  &mo 1  &kp APOS  &kp SPACE  &kp LALT   &kp LGUI             &kp SPACE  &mo 1   &kp LARW   &kp UARW  &kp DARW  &kp RARW
+   &kp LCTRL  &mo 1  &soft_off  &kp SPACE  &kp LALT   &kp LGUI             &kp SPACE  &mo 1   &kp LARW   &kp UARW  &kp DARW  &kp RARW
                         >;
                 };
                 lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |SOFTOFF|  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |----------|       |       |       |       |       |       |    
+// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |----------|       |       |       |       |       |       |    
 // |SCRSTCP|       |       |       |       |       |----------|       | VOL DN| VOL UP|       |       |       |    
 // |       |  LPAR |  RPAR |   -   |   =   |   ~   |----------|       |  BTT6 |  BTT7 |  BTT9 |  BTT0 | BTT12 |    
 // |       |  LBKT |  RBKT |   _   |   +   |   `   |----------|       |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |    
@@ -212,7 +212,7 @@
 // | Zoom In | Zoom Out | MissCtrl |
 
                         bindings = <
-   &soft_off &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        &trans    &trans        &trans        &trans     &trans         &trans
+   &trans &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        &trans    &trans        &trans        &trans     &trans         &trans
    &BTT_4    &trans      &trans         &trans         &trans         &trans                 &trans    &kp C_VOL_DN  &kp C_VOL_UP  &trans     &trans         &trans 
    &trans    &kp LPAR    &kp RPAR       &kp MINUS      &kp EQUAL      &kp TILDE              &trans    &BTT_6        &BTT_12        &BTT_7     &BTT_9         &BTT_0
    &trans    &kp LBKT    &kp RBKT       &kp UNDER      &kp PLUS       &kp GRAVE              &trans    &BTT_1        &BTT_2        &BTT_3     &BTT_8         &BTT_5
