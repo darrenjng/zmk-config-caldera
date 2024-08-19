@@ -46,7 +46,7 @@ RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5)                 RC(5,6) RC(5,7) 
     keys {
         compatible = "gpio-keys";
         soft_off_key: soft_off_key {
-            gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+            gpios = <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         };
     };
 };
