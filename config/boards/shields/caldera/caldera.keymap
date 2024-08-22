@@ -212,29 +212,29 @@
                 };
                 BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
-//  BKSP  |  DEL  |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |  BT5   |   
-//        | VOL DN| VOL UP|       |       |       |----------|       |       |       |       |       |        |   
-//        |  BTT6 |  BTT7 |  BTT9 |  BTT0 | BTT12 |----------|       |  LPAR |  RPAR |   -   |   =   |   ~    |   
-//        |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |----------|       |  LBKT |  RBKT |   _   |   +   |   `    |   
-//        |SCRSTCP|  PREV |-------|  NEXT | PAUSE |----------|       |-------|ZM OUT | ZM IN | BTT11 |        |
+// | BKSP  |  DEL  |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |  BT5   |   
+// |       | VOL DN| VOL UP|       |       |       |----------|       |       |       |       |       |        |   
+// |       |  BTT6 |  BTT7 |  BTT9 |  BTT0 | BTT12 |----------|       |  LPAR |  RPAR |   -   |   =   |   ~    |   
+// | ZM IN |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |----------|       |  LBKT |  RBKT |   _   |   +   |   `    |   
+// |ZM OUT |SCRSTCP|  PREV |-------|  NEXT | PAUSE |----------|       |-------|       |       | BTT11 |        |
 // ------------------------------------------------------------------------------------------------------------
 
 
 // BTT Map Left
 // --------------------------------------------------------------
-// | MovScrn | ScrnStCrop | -------- | -------- | SplitEdge  |
-// | File       |  Outlook | VSCode     | Edge     | Zotero     |
+// | MovScrn    | ScrnStCrop | MissCtrl   | -------- | SplitEdge  |
+// | File       |  Outlook   | VSCode     | Edge     | Zotero     |
 
 // BTT Map Right
 // --------------------------------------------------------------
-// | Zoom In | Zoom Out | MissCtrl |
+// | -------- | -------- | -------- |
 
                         bindings = <
    &kp BSPC  &kp DEL       &trans        &trans       &trans         &trans           &tog 1      &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
-   &trans    &kp C_VOL_DN  &kp C_VOL_UP  &trans       &trans         &trans           &trans   &trans        &trans         &trans         &trans         &trans       
+   &trans    &kp C_VOL_DN  &kp C_VOL_UP  &trans       &trans         &trans           &trans      &trans        &trans         &trans         &trans         &trans       
    &trans    &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0           &trans      &kp LPAR      &kp RPAR       &kp MINUS      &kp EQUAL      &kp TILDE   
-   &trans    &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5           &trans      &kp LBKT      &kp RBKT       &kp UNDER      &kp PLUS       &kp GRAVE   
-   &trans    &BTT_4        &kp C_PREV    &trans       &kp C_NEXT     &kp C_PP         &trans      &trans        &zoom_out      &zoom_in       &BTT_11        &trans      
+   &zoom_in  &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5           &trans      &kp LBKT      &kp RBKT       &kp UNDER      &kp PLUS       &kp GRAVE   
+   &zoom_out &BTT_4        &kp C_PREV    &trans       &kp C_NEXT     &kp C_PP         &trans      &trans        &trans      &trans       &BTT_11        &trans      
                         >;
                 };
         };
