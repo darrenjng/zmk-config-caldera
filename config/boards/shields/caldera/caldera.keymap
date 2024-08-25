@@ -232,7 +232,7 @@
                 };
                 BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
-// | BKSP  |  DEL  |  SPC  |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |  BT5   |   
+// | BKSP  |  DEL  |  SPC  |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |        |   
 // |PREVTAB| VOL DN| VOL UP| ENTER |       |       |----------|       |       |       |       |       |        |   
 // |NEXTTAB|  BTT6 |  BTT7 |  BTT9 |  BTT0 | BTT12 |----------|       |  LPAR |  RPAR |   -   |   =   |   ~    |   
 // | ZM IN |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |----------|       |  LBKT |  RBKT |   _   |   +   |   `    |   
@@ -250,7 +250,7 @@
 // | -------- | -------- | -------- |
 
                         bindings = <
-   &kp BSPC  &kp DEL       &kp SPACE        &trans       &trans         &trans           &tog 1      &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+   &kp BSPC  &kp DEL       &kp SPACE        &trans       &trans         &trans           &tog 1      &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &trans
    &prev_tab    &kp C_VOL_DN  &kp C_VOL_UP  &kp RET       &trans         &trans           &trans      &trans        &trans         &trans         &trans         &trans       
    &next_tab    &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0           &trans      &kp LPAR      &kp RPAR       &kp MINUS      &kp EQUAL      &kp TILDE   
    &zoom_in  &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5           &trans      &kp LBKT      &kp RBKT       &kp UNDER      &kp PLUS       &kp GRAVE   
