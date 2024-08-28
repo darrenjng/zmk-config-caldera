@@ -203,7 +203,7 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |-----|  Y  |  U  |  I  |  O  |  P  |  \   |
 // | CAPS |  A  |  S  |  D  |  F  |  G  |-----|  H  |  J  |  K  |  L  |  ;  |  ENT |  
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |-----|  N  |  M  |  ,  |  .  |  /  | SHFT |
-// | CTRL | SPC |ALOW | LOW | ALT | CMD |-----| SPC | LOW |ALOW |  '  |      |      |
+// | CTRL | SPC |ALOW | LOW | ALT | CMD |-----| SPC | LOW |ALOW |  '  |     |      |
 // ---------------------------------------------------------------------------------
 
                         bindings = <
@@ -234,10 +234,10 @@
                 BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
 // | BKSP  |  DEL  |  SPC  |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |        |   
-// |PREVTAB| VOL DN| VOL UP| ENTER |       |       |----------|       |LBRACE |RBRACE |       |       |        |   
-// |NEXTTAB|  BTT6 |  BTT7 |  BTT9 |  BTT0 | BTT12 |----------|       |  LPAR |  RPAR |   -   |   =   |   ~    |   
-// | ZM IN |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |----------|       |  LBKT |  RBKT |   _   |   +   |   `    |   
-// |ZM OUT |SCRSTCP|  PREV |-------|  NEXT | PAUSE |----------|       |-------|-------|       | BTT11 |        |
+// |PREVTAB| VOL DN| VOL UP| ENTER |       |       |----------|LBRACE |RBRACE | UARW  |   -   |       |        |   
+// |NEXTTAB|  BTT6 |  BTT7 |  BTT9 |  BTT0 | BTT12 |----------|       | LARW  | DARW  | RARW  |   =   | ENTER  |   
+// | ZM IN |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |----------|  LBKT |  RBKT |       |   _   |   +   |   ~    |   
+// |ZM OUT |SCRSTCP|  PREV |-------|  NEXT | PAUSE |----------|       |-------|-------|       | BTT11 |   `    |
 // ------------------------------------------------------------------------------------------------------------
 
 
@@ -251,11 +251,11 @@
 // | -------- | -------- | -------- |
 
                         bindings = <
-   &kp BSPC    &kp DEL       &kp SPACE     &trans       &trans         &trans           &tog 1   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &trans
-   &prev_tab   &kp C_VOL_DN  &kp C_VOL_UP  &kp RET      &trans         &trans           &trans   &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans         &trans         &trans       
-   &next_tab   &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0           &trans   &kp LPAR        &kp RPAR        &kp MINUS      &kp EQUAL      &kp TILDE   
-   &zoom_in    &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5           &trans   &kp LBKT        &kp RBKT        &kp UNDER      &kp PLUS       &kp GRAVE   
-   &zoom_out   &BTT_4        &kp C_PREV    &trans       &kp C_NEXT     &kp C_PP         &trans   &trans          &trans          &trans         &BTT_11        &trans      
+   &kp BSPC    &kp DEL       &kp SPACE     &trans       &trans         &trans           &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &trans
+   &prev_tab   &kp C_VOL_DN  &kp C_VOL_UP  &kp RET      &trans         &trans           &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp UARW        &kp MINUS      &trans         &trans       
+   &next_tab   &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0           &trans          &kp LARW          &kp DARW        &kp RARW       &kp EQUAL      &kp RET   
+   &zoom_in    &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5           &kp LBKT        &kp RBKT          &trans          &kp UNDER      &kp PLUS       &kp TILDE   
+   &zoom_out   &BTT_4        &kp C_PREV    &trans       &kp C_NEXT     &kp C_PP         &trans          &trans            &trans          &trans         &BTT_11        &kp GRAVE   
                         >;
                 };
                 ALT_BASE_LOWER {
