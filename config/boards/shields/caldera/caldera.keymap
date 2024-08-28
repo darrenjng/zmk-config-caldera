@@ -259,7 +259,7 @@
 // |       |       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |        |   
 // |       |       |       |       |       |       |----------|LBRACE |RBRACE | UARW  |   -   |       |        |   
 // |       |       |       |       |       |       |----------|       | LARW  | DARW  | RARW  |   =   | ENTER  |   
-// |       |       |       |       |       |       |----------|  LBKT |  RBKT |       |   _   |   +   |   ~    |   
+// |       |       |       |       |       |       |----------|  LBKT |  RBKT |   '   |   _   |   +   |   ~    |   
 // |       |       |       |       |       |       |----------|       |-------|       |       | BTT11 |   `    |
 // ------------------------------------------------------------------------------------------------------------
 
@@ -267,7 +267,7 @@
    &trans       &trans         &trans   &trans       &trans         &trans           &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &trans
    &trans       &trans         &trans   &trans       &trans         &trans           &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp UARW        &kp MINUS      &trans         &trans       
    &trans       &trans         &trans   &trans       &trans         &trans           &trans          &kp LARW          &kp DARW        &kp RARW       &kp EQUAL      &kp RET     
-   &trans       &trans         &trans   &trans       &trans         &trans           &kp LBKT        &kp RBKT          &trans          &kp UNDER      &kp PLUS       &kp TILDE  
+   &trans       &trans         &trans   &trans       &trans         &trans           &kp LBKT        &kp RBKT          &kp APOS          &kp UNDER      &kp PLUS       &kp TILDE  
    &trans       &trans         &trans   &trans       &trans         &trans           &trans          &trans            &trans          &trans         &BTT_11        &kp GRAVE  
                         >;
                 };
