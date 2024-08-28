@@ -196,7 +196,7 @@
             bindings
                 = <&macro_press &kp LGUI>
                 , <&macro_tap &kp C>
-                , <&macro_press &kp LGUI>
+                , <&macro_release &kp LGUI>
                 ;
         };
         paste: paste {
@@ -205,7 +205,7 @@
             bindings
                 = <&macro_press &kp LGUI>
                 , <&macro_tap &kp V>
-                , <&macro_press &kp LGUI>
+                , <&macro_release &kp LGUI>
                 ;
         };
     };
