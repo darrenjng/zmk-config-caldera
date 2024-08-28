@@ -261,16 +261,16 @@
                 ALT_BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
 // |       |       |       |       |       |       |----------|       |       |       |       |       |       |   
-// |       |       |       |       |       |       |----------|       |       | UARW  |       |       |       |   
-// |       |       |       |       |       |       |----------|       | LARW  | DARW  | RARW  |       |       |   
+// |       |       |       |       |       |       |----------|       | BKSP  | UARW  |  SPC  |       |       |   
+// |       |       |       |       |       |       |----------|       | LARW  | DARW  | RARW  |  ENT  |       |   
 // |       |       |       |       |       |       |----------|       |       |       |       |       |       |   
 // |       |       |       |-------|       |       |----------|       |-------|-------|       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
    &trans       &trans         &trans   &trans       &trans         &trans           &trans       &trans         &trans    &trans       &trans         &trans
-   &trans       &trans         &trans   &trans       &trans         &trans           &trans       &trans         &kp UARW  &trans       &trans         &trans     
-   &trans       &trans         &trans   &trans       &trans         &trans           &trans       &kp LARW       &kp DARW  &kp RARW     &trans         &trans   
+   &trans       &trans         &trans   &trans       &trans         &trans           &trans       &kp BSPC         &kp UARW  &kp SPACE       &trans         &trans     
+   &trans       &trans         &trans   &trans       &trans         &trans           &trans       &kp LARW       &kp DARW  &kp RARW     &kp RET         &trans   
    &trans       &trans         &trans   &trans       &trans         &trans           &trans       &trans         &trans    &trans       &trans         &trans   
    &trans       &trans         &trans   &trans       &trans         &trans           &trans       &trans         &trans    &trans       &trans         &trans   
                         >;
