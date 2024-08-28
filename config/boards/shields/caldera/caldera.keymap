@@ -261,17 +261,17 @@
                 ALT_BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
 // |       |       |       |       |       |       |----------|       |       |       |       |       |       |   
-// |       |       |       |       |       |       |----------|       | BKSP  | UARW  |  SPC  |       |       |   
+// |       |       |       |       |       |       |----------|       |       | UARW  |       |       |       |   
 // |       |       |       |       |       |       |----------|       | LARW  | DARW  | RARW  |  ENT  |       |   
-// |       |       |       |       |       |       |----------|       |       |       |       |       |       |   
+// |       |       |       |       |       |       |----------|       | BKSP  |       |  SPC  |       |       |   
 // |       |       |       |-------|       |       |----------|       |-------|-------|       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
    &trans       &trans         &trans   &trans       &trans         &trans           &trans       &trans         &trans    &trans       &trans         &trans
-   &trans       &trans         &trans   &trans       &trans         &trans           &trans       &kp BSPC         &kp UARW  &kp SPACE       &trans         &trans     
+   &trans       &trans         &trans   &trans       &trans         &trans           &trans       &trans         &kp UARW  &trans       &trans         &trans     
    &trans       &trans         &trans   &trans       &trans         &trans           &trans       &kp LARW       &kp DARW  &kp RARW     &kp RET         &trans   
-   &trans       &trans         &trans   &trans       &trans         &trans           &trans       &trans         &trans    &trans       &trans         &trans   
+   &trans       &trans         &trans   &trans       &trans         &trans           &trans       &kp BSPC       &trans    &kp SPACE    &trans         &trans   
    &trans       &trans         &trans   &trans       &trans         &trans           &trans       &trans         &trans    &trans       &trans         &trans   
                         >;
                 };
