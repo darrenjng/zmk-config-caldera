@@ -285,7 +285,7 @@
 // | File       |  Outlook   | VSCode     | Edge     | Zotero     |
 
                         bindings = <
-   &kp BSPC    &kp SPACE     &kp RET       &copy       &undo         &redo            &trans       &trans         &trans   &trans       &trans         &trans
+   &kp BSPC    &kp SPACE     &kp RET       &copy       &undo         &redo            &trans k       &trans         &trans   &trans       &trans         &trans
    &prev_tab   &kp C_VOL_DN  &kp C_VOL_UP  &paste      &trans         &trans            &trans       &trans         &trans   &trans       &trans         &trans    
    &next_tab   &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0            &trans       &trans         &trans   &trans       &trans         &trans 
    &zoom_in    &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5            &trans       &trans         &trans   &trans       &trans         &trans   
@@ -295,18 +295,18 @@
                 ALT_BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
 // |       |       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |        |   
-// |       |       |       |       |       |       |----------|LBRACE |RBRACE | UARW  |   -   |       |        |   
-// |       |       |       |       |       |       |----------|       | LARW  | DARW  | RARW  |   =   | ENTER  |   
-// |       |       |       |       |       |       |----------|  LBKT |  RBKT |   '   |   _   |   +   |   ~    |   
+// |       |  LBKT |  RBKT |LBRACE |RBRACE |       |----------|LBRACE |RBRACE | UARW  |   -   |       |        |   
+// |       |   "   |   -   |   =   |   ~   |       |----------|       | LARW  | DARW  | RARW  |   =   | ENTER  |   
+// |       |   '   |   _   |   +   |   `   |       |----------|  LBKT |  RBKT |   '   |   _   |   +   |   ~    |   
 // |       |       |       |       |       |       |----------|       |-------|       |       | BTT11 |   `    |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
-   &trans       &trans         &trans   &trans       &trans         &trans           &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &trans
-   &trans       &trans         &trans   &trans       &trans         &trans           &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp UARW        &kp MINUS      &trans         &trans       
-   &trans       &trans         &trans   &trans       &trans         &trans           &trans          &kp LARW          &kp DARW        &kp RARW       &kp EQUAL      &kp RET     
-   &trans       &trans         &trans   &trans       &trans         &trans           &kp LBKT        &kp RBKT          &kp APOS          &kp UNDER      &kp PLUS       &kp TILDE  
-   &trans       &trans         &trans   &trans       &trans         &trans           &trans          &trans            &trans          &trans         &BTT_11        &kp GRAVE  
+   &trans       &trans         &trans     &trans          &trans           &trans           &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &trans
+   &trans       &kp LBKT       &kp RBKT   &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans           &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp UARW        &kp MINUS      &trans         &trans       
+   &trans       &trans         &kp MINUS  &kp EQUAL       &kp RET          &trans           &trans          &kp LARW          &kp DARW        &kp RARW       &kp EQUAL      &kp RET     
+   &trans       &kp APOS       &kp UNDER  &kp PLUS        &kp TILDE        &trans           &kp LBKT        &kp RBKT          &kp APOS        &kp UNDER      &kp PLUS       &kp TILDE  
+   &trans       &trans         &trans     &trans          &trans           &trans           &trans          &trans            &trans          &trans         &BTT_11        &kp GRAVE  
                         >;
                 };
         };
