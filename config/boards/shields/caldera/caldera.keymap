@@ -296,16 +296,16 @@
 // ------------------------------------------------------------------------------------------------------------
 // |       |       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |        |   
 // |       |  LBKT |  RBKT |LBRACE |RBRACE |       |----------|       |       | UARW  |       |       |        |   
-// |       |   "   |   -   |   =   |   ~   |       |----------|  SPC  | LARW  | DARW  | RARW  |       | ENTER  |   
-// |       |   '   |   _   |   +   |   `   |       |----------|       |       |       |       |       |        |   
+// |       |   '   |   -   |   =   |   ~   |       |----------|  SPC  | LARW  | DARW  | RARW  |       | ENTER  |   
+// |       |   "   |   _   |   +   |   `   |       |----------|       |       |       |       |       |        |   
 // |       |       |       |       |       |       |----------|       |-------|       |       | BTT11 |        |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
    &trans       &trans         &trans     &trans          &trans           &trans           &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &trans
    &trans       &kp LBKT       &kp RBKT   &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans           &trans          &trans            &kp UARW        &trans         &trans         &trans       
-   &trans       &kp DQT        &kp MINUS  &kp EQUAL       &kp TILDE        &trans           &kp SPACE       &kp LARW          &kp DARW        &kp RARW       &trans         &kp RET     
-   &trans       &kp APOS       &kp UNDER  &kp PLUS        &kp GRAVE        &trans           &trans          &trans            &trans          &trans         &trans         &trans  
+   &trans       &kp APOS       &kp MINUS  &kp EQUAL       &kp TILDE        &trans           &kp SPACE       &kp LARW          &kp DARW        &kp RARW       &trans         &kp RET     
+   &trans       &kp DQT        &kp UNDER  &kp PLUS        &kp GRAVE        &trans           &trans          &trans            &trans          &trans         &trans         &trans  
    &trans       &trans         &trans     &trans          &trans           &trans           &trans          &trans            &trans          &trans         &BTT_11        &trans  
                         >;
                 };
