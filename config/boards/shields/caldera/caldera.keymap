@@ -272,25 +272,25 @@
                 BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
 // | BKSP  |  SPC  | ENTER | COPY  |  UNDO |  REDO |----------|       |       |       |       |       |       |   
-// |PREVTAB| VOL DN| VOL UP| PASTE |       |       |----------|       |       |       |       |       |       |   
+// |PREVTAB| VOL DN| VOL UP|ZM OUT | ZM IN |       |----------|       |       |       |       |       |       |   
 // |NEXTTAB|  BTT6 | BTT12 |  BTT7 |  BTT9 |  BTT0 |----------|       |       |       |       |       |       |   
-// | ZM IN |  BTT1 |  BTT2 |  BTT3 |  BTT8 |  BTT5 |----------|       |       |       |       |       |       |   
-// |ZM OUT |SCRSTCP|  PREV |-------|  NEXT | PAUSE |----------|       |       |       |       |       |       |
+// | NEXT  |  BTT1 |=======|=======|=======|  BTT5 |----------|       |       |       |       |       |       |   
+// | PREV  |SCRSTCP|=======|-------|=======| PAUSE |----------|       |       |       |       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
 
 // BTT Map Left
 // --------------------------------------------------------------------
-// | MovScrn    | SearchTabsEdge | MissCtrl   | MinWin   | SplitEdge  |
-// | File       |  Outlook       | VSCode     | Edge     | Zotero     |
+// | File    | SearchTabsEdge | MissCtrl   | Outlook  | SplitEdge  |
+// | MovScrn |================|------------|==========|            |
 // --------------------------------------------------------------------
 
                         bindings = <
-   &kp BSPC    &kp SPACE     &kp RET       &copy       &undo         &redo            &trans       &trans         &trans   &trans       &trans         &trans
-   &prev_tab   &kp C_VOL_DN  &kp C_VOL_UP  &paste      &trans         &trans            &trans       &trans         &trans   &trans       &trans         &trans    
-   &next_tab   &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0            &trans       &trans         &trans   &trans       &trans         &trans 
-   &zoom_in    &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5            &trans       &trans         &trans   &trans       &trans         &trans   
-   &zoom_out   &BTT_4        &kp C_PREV    &trans       &kp C_NEXT     &kp C_PP          &trans       &trans         &trans   &trans       &trans         &trans   
+   &kp BSPC    &kp SPACE     &kp RET       &copy        &undo          &redo            &trans       &trans         &trans   &trans       &trans         &trans
+   &prev_tab   &kp C_VOL_DN  &kp C_VOL_UP  &zoom_out    &zoom_in       &trans            &trans       &trans         &trans   &trans       &trans         &trans    
+   &next_tab   &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0             &trans       &trans         &trans   &trans       &trans         &trans 
+   &kp C_NEXT  &BTT_1        &trans        &trans       &trans         &BTT_5            &trans       &trans         &trans   &trans       &trans         &trans   
+   &kp C_PREV  &BTT_4        &trans        &trans       &trans         &kp C_PP          &trans       &trans         &trans   &trans       &trans         &trans   
                         >;
                 };
                 ALT_BASE_LOWER {
