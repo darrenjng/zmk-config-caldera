@@ -298,7 +298,7 @@
 // |       |       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |        |   
 // |       |  LBKT |  RBKT |LBRACE |RBRACE |       |----------|       |       | UARW  |       |       |        |   
 // |       |   '   |   -   |   =   |   ~   |   |   |----------|  SPC  | LARW  | DARW  | RARW  |       | ENTER  |   
-// |BTT_10 |   "   |   _   |   +   |   `   |BTT_10 |----------|       |       |       |       |       |        |   
+// |       |   "   |   _   |   +   |   `   |BTT_10 |----------|       |       |       |       |       |        |   
 // |-------|       |       |       |       |       |----------|       |-------|       |       | BTT11 |        |
 // ------------------------------------------------------------------------------------------------------------
 
@@ -306,7 +306,7 @@
    &trans       &trans         &trans     &trans          &trans           &trans           &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &trans
    &trans       &kp LBKT       &kp RBKT   &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans           &trans          &trans            &kp UARW        &trans         &trans         &trans       
    &trans       &kp APOS       &kp MINUS  &kp EQUAL       &kp TILDE        &kp PIPE         &kp SPACE       &kp LARW          &kp DARW        &kp RARW       &trans         &kp RET     
-   &BTT_10      &kp DQT        &kp UNDER  &kp PLUS        &kp GRAVE        &BTT_10           &trans          &trans            &trans          &trans         &trans         &trans  
+   &trans      &kp DQT        &kp UNDER  &kp PLUS        &kp GRAVE        &BTT_10           &trans          &trans            &trans          &trans         &trans         &trans  
    &trans       &trans         &trans     &trans          &trans           &trans           &trans          &trans            &trans          &trans         &BTT_11        &trans  
                         >;
                 };
