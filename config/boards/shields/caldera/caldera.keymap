@@ -225,7 +225,7 @@
                 , <&macro_press &kp LSHIFT>
                 , <&macro_tap &kp Z>
                 , <&macro_release &kp LSHIFT>
-                , <&macro_release &kp GUI>
+                , <&macro_release &kp LGUI>
                 ;
         };
         vscode_term_up: vscode_term_up {
@@ -236,7 +236,7 @@
                 , <&macro_press &kp LSHIFT>
                 , <&macro_tap &kp LBKT>
                 , <&macro_release &kp LSHIFT>
-                , <&macro_release &kp GUI>
+                , <&macro_release &kp LGUI>
                 ;
         };
         vscode_term_down: vscode_term_down {
@@ -247,7 +247,7 @@
                 , <&macro_press &kp LSHIFT>
                 , <&macro_tap &kp RBKT>
                 , <&macro_release &kp LSHIFT>
-                , <&macro_release &kp GUI>
+                , <&macro_release &kp LGUI>
                 ;
         };
     };
