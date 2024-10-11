@@ -228,6 +228,28 @@
                 , <&macro_release &kp GUI>
                 ;
         };
+        vscode_term_up: vscode_term_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp LBKT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp GUI>
+                ;
+        };
+        vscode_term_down: vscode_term_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp RBKT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp GUI>
+                ;
+        };
     };
 };
 
@@ -295,19 +317,19 @@
                 };
                 ALT_BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
-// |       |       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |        |   
-// |       |  LBKT |  RBKT |LBRACE |RBRACE |       |----------|       |       | UARW  |       |       |        |   
-// |       |   '   |   -   |   =   |   ~   |   |   |----------|  SPC  | LARW  | DARW  | RARW  |       | ENTER  |   
+// |       |       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |========|   
+// |       |  LBKT |  RBKT |LBRACE |RBRACE |       |----------|       |       | UARW  |       |vscterm|        |   
+// |       |   '   |   -   |   =   |   ~   |   |   |----------|  SPC  | LARW  | DARW  | RARW  |vscterm| ENTER  |   
 // |       |   "   |   _   |   +   |   `   |BTT_10 |----------|       |       |       |       |       |        |   
 // |       |-------|       |       |       |       |----------|       |-------|       |       | BTT11 |        |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
-   &soft_off       &trans         &trans     &trans          &trans           &trans           &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &soft_off
-   &trans       &kp LBKT       &kp RBKT   &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans           &trans          &trans            &kp UARW        &trans         &trans         &trans       
-   &trans       &kp APOS       &kp MINUS  &kp EQUAL       &kp TILDE        &kp PIPE         &kp SPACE       &kp LARW          &kp DARW        &kp RARW       &trans         &kp RET     
-   &trans      &kp DQT        &kp UNDER  &kp PLUS        &kp GRAVE        &BTT_10           &trans          &trans            &trans          &trans         &trans         &trans  
-   &trans       &trans         &trans     &trans          &trans           &trans           &trans          &trans            &trans          &trans         &BTT_11        &trans  
+   &soft_off    &trans         &trans     &trans          &trans           &trans           &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3       &trans
+   &trans       &kp LBKT       &kp RBKT   &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans           &trans          &trans            &kp UARW        &trans         &vscode_term_up    &trans       
+   &trans       &kp APOS       &kp MINUS  &kp EQUAL       &kp TILDE        &kp PIPE         &kp SPACE       &kp LARW          &kp DARW        &kp RARW       &vscode_term_down  &kp RET     
+   &trans      &kp DQT        &kp UNDER  &kp PLUS        &kp GRAVE        &BTT_10           &trans          &trans            &trans          &trans         &trans             &trans  
+   &trans       &trans         &trans     &trans          &trans           &trans           &trans          &trans            &trans          &trans         &BTT_11            &trans  
                         >;
                 };
         };
