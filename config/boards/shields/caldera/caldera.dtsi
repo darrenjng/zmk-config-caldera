@@ -42,22 +42,6 @@ RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5)                 RC(5,6) RC(5,7) 
     };
 };
 
-/ {
-    wakeup_source: wakeup_source {
-        compatible = "zmk,gpio-key-wakeup-trigger";
-
-        trigger = <&soft_off_key>;
-        wakeup-source;
-    };
-};
-
-/ {
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&wakeup_source>;
-    };
-};
-
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
