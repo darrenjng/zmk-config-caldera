@@ -43,15 +43,6 @@ RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5)                 RC(5,6) RC(5,7) 
 };
 
 / {
-    keys {
-        compatible = "gpio-keys";
-        soft_off_key: soft_off_key {
-            gpios = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        };
-    };
-};
-
-/ {
     wakeup_source: wakeup_source {
         compatible = "zmk,gpio-key-wakeup-trigger";
 
@@ -71,15 +62,13 @@ RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5)                 RC(5,6) RC(5,7) 
     spi0_default: spi0_default {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 22)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 20)>,
-                <NRF_PSEL(SPIM_MISO, 0, 25)>;
+                <NRF_PSEL(SPIM_MOSI, 0, 20)>;
         };
     };
     spi0_sleep: spi0_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 22)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 20)>,
-                <NRF_PSEL(SPIM_MISO, 0, 25)>;
+                <NRF_PSEL(SPIM_MOSI, 0, 20)>;
             low-power-enable;
         };
     };
