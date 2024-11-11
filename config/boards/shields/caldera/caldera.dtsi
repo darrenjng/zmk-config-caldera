@@ -45,14 +45,14 @@ RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,5)                 RC(5,6) RC(5,7) 
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 22)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 20)>;
+            psels = <NRF_PSEL(SPIM_SCK, 1, 1)>,
+                <NRF_PSEL(SPIM_MOSI, 1, 2)>;
         };
     };
     spi0_sleep: spi0_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 22)>,  
-                <NRF_PSEL(SPIM_MOSI, 0, 20)>;
+            psels = <NRF_PSEL(SPIM_SCK, 1, 1)>,  
+                <NRF_PSEL(SPIM_MOSI, 1, 2)>;
             low-power-enable;
         };
     };
@@ -63,7 +63,7 @@ nice_view_spi: &spi0 {
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
+    cs-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
 };
 
 &pro_micro_i2c {
