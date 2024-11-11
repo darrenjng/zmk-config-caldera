@@ -289,7 +289,7 @@
    &kp TAB    &kp Q      &kp W     &kp E      &kp R      &kp T                &kp Y      &kp U   &kp I      &kp O     &kp P     &kp BSLH
    &kp CAPS   &kp A      &kp S     &kp D      &kp F      &kp G                &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp RET
    &kp LSHFT  &kp Z      &kp X     &kp C      &kp V      &kp B                &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-   &kp LCTRL  &mo 2  &kp APOS  &kp LALT   &kp LGUI   &kp SPACE             &kp SPACE  &mo 2   &kp LARW   &kp UARW  &kp DARW  &kp RARW
+   &kp LCTRL  &mo 2  &kp APOS  &kp LALT   &kp LGUI   &kp SPACE             &kp SPACE  &mo 3   &kp LARW   &kp UARW  &kp DARW  &kp RARW
                         >;
                 };
                 BASE_LOWER {
