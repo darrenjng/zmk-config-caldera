@@ -295,9 +295,9 @@
                 BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
 // | BKSP  |  SPC  | ENTER | COPY  |  UNDO |  REDO |----------|       |       |       |       |       |       |   
-// |PREVTAB| VOL DN| VOL UP|ZM OUT | ZM IN |       |----------|       |   7   |   8   |   9   |       |       |   
-// |NEXTTAB|  BTT6 | BTT12 |  BTT7 |  BTT9 |  BTT0 |----------|   0   |   4   |   5   |   6   |       |       |   
-// | NEXT  |  BTT1 | BTT2  | BTT3  | BTT8  |  BTT5 |----------|       |   1   |   2   |   3   |       |       |   
+// |PREVTAB| VOL DN| VOL UP|ZM OUT | ZM IN |       |----------| BKSP  |   7   |   8   |   9   |   +   |       |   
+// |NEXTTAB|  BTT6 | BTT12 |  BTT7 |  BTT9 |  BTT0 |----------|   0   |   4   |   5   |   6   |   -   |       |   
+// | NEXT  |  BTT1 | BTT2  | BTT3  | BTT8  |  BTT5 |----------|   .   |   1   |   2   |   3   |   =   |       |   
 // | PREV  |SCRSTCP|=======|-------|=======| PAUSE |----------|       |       |-------|       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
@@ -310,9 +310,9 @@
 
                         bindings = <
    &kp BSPC    &kp SPACE     &kp RET       &copy        &undo          &redo             &trans       &trans         &trans   &trans       &trans         &trans
-   &prev_tab   &kp C_VOL_DN  &kp C_VOL_UP  &zoom_out    &zoom_in       &trans            &trans       &kp N7         &kp N8   &kp N9       &trans         &trans    
-   &next_tab   &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0            &kp N0       &kp N4         &kp N5   &kp N6       &trans         &trans 
-   &kp C_NEXT  &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5            &trans       &kp N1         &kp N2   &kp N3       &trans         &trans   
+   &prev_tab   &kp C_VOL_DN  &kp C_VOL_UP  &zoom_out    &zoom_in       &trans            &kp BSPC     &kp N7         &kp N8   &kp N9       &kp PLUS       &trans    
+   &next_tab   &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0            &kp N0       &kp N4         &kp N5   &kp N6       &kp MINUS      &trans 
+   &kp C_NEXT  &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5            &kp DOT      &kp N1         &kp N2   &kp N3       &kp EQUAL      &trans   
    &kp C_PREV  &BTT_4        &trans        &trans       &trans         &kp C_PP          &trans       &trans         &trans   &trans       &trans         &trans   
                         >;
                 };
