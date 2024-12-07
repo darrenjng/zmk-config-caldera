@@ -260,19 +260,19 @@
 
                 BASE {
 // ---------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |-----|  6  |  7  |  8  |  9  |  0  | BKSP |
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |-----|  Y  |  U  |  I  |  O  |  P  |  \   |
+// |  ESC | BTT1| BTT2| BTT3| BTT4| BTT5|-----| BTT6| BTT7| BTT8| BTT9|BTT10| BKSP |
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |-----|  Y  |  U  |  I  |  O  |  P  |   \  |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |-----|  H  |  J  |  K  |  L  |  ;  |  ENT |  
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |-----|  N  |  M  |  ,  |  .  |  /  | SHFT |
-// |      | ALOW| SPC | LOW | ALT | CMD |-----| SPC | ALOW| LOW |  '  |     |      |
+// |      | ALOW| SPC | LOW | ALT | CMD |-----| SPC | ALOW| LOW |     |     |      |
 // ---------------------------------------------------------------------------------
 
                         bindings = <
-   &kp ESC    &kp N1     &kp N2      &kp N3     &kp N4     &kp N5               &kp N6     &kp N7  &kp N8     &kp N9    &kp N0    &kp BSPC
+   &kp ESC    &BTT_1     &BTT_2      &BTT_3     &BTT_4     &BTT_5               &BTT_6     &BTT_7  &BTT_8     &BTT_9    &BTT_10    &kp BSPC
    &kp TAB    &kp Q      &kp W       &kp E      &kp R      &kp T                &kp Y      &kp U   &kp I      &kp O     &kp P     &kp BSLH
    &kp LCTRL   &kp A     &kp S       &kp D      &kp F      &kp G                &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp RET
    &kp LSHFT  &kp Z      &kp X       &kp C      &kp V      &kp B                &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-   &trans     &mo 3      &kp SPACE   &mo 2      &kp LALT   &kp LGUI             &kp SPACE  &mo 3   &mo 2     &kp APOS  &trans    &trans
+   &trans     &mo 3      &kp SPACE   &mo 2      &kp LALT   &kp LGUI             &kp SPACE  &mo 3   &mo 2     &trans  &trans    &trans
                         >;
                 };
                 ALT_BASE {
@@ -296,8 +296,8 @@
 // ------------------------------------------------------------------------------------------------------------
 // | BKSP  |  SPC  | ENTER | COPY  |  UNDO |  REDO |----------|       |       |       |       |       |       |   
 // |PREVTAB| VOL DN| VOL UP|ZM OUT | ZM IN |       |----------| BKSP  |   7   |   8   |   9   |   +   |       |   
-// |NEXTTAB|  BTT6 | BTT12 |  BTT7 |  BTT9 |  BTT0 |----------|   0   |   4   |   5   |   6   |   -   |       |   
-// | NEXT  |  BTT1 | BTT2  | BTT3  | BTT8  |  BTT5 |----------|   .   |   1   |   2   |   3   |   =   |       |   
+// |NEXTTAB|  BTT7 | BTT1  |  BTT7 | BTT10 |       |----------|   0   |   4   |   5   |   6   |   -   |       |   
+// | NEXT  |  BTT2 | BTT3  |       | BTT8  |       |----------|   .   |   1   |   2   |   3   |   =   |       |   
 // | PREV  |SCRSTCP|=======|-------|=======| PAUSE |----------|       |       |-------|       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
@@ -311,15 +311,15 @@
                         bindings = <
    &kp BSPC    &kp SPACE     &kp RET       &copy        &undo          &redo             &trans       &trans         &trans   &trans       &trans         &trans
    &prev_tab   &kp C_VOL_DN  &kp C_VOL_UP  &zoom_out    &zoom_in       &trans            &kp BSPC     &kp N7         &kp N8   &kp N9       &kp PLUS       &trans    
-   &next_tab   &BTT_6        &BTT_12       &BTT_7       &BTT_9         &BTT_0            &kp N0       &kp N4         &kp N5   &kp N6       &kp MINUS      &trans 
-   &kp C_NEXT  &BTT_1        &BTT_2        &BTT_3       &BTT_8         &BTT_5            &kp DOT      &kp N1         &kp N2   &kp N3       &kp EQUAL      &trans   
+   &next_tab   &BTT_7        &BTT_1       &BTT_7       &BTT_10         &trans            &kp N0       &kp N4         &kp N5   &kp N6       &kp MINUS      &trans 
+   &kp C_NEXT  &BTT_2        &BTT_3        &trans       &BTT_8         &trans            &kp DOT      &kp N1         &kp N2   &kp N3       &kp EQUAL      &trans   
    &kp C_PREV  &BTT_4        &trans        &trans       &trans         &kp C_PP          &trans       &trans         &trans   &trans       &trans         &trans   
                         >;
                 };
                 ALT_BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
-// |       |       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |========|   
-// |       |  LBKT |  RBKT |LBRACE |RBRACE |       |----------|       |       | UARW  |       |vscterm|   F7   |   
+// |SOFTOFF|       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |========|   
+// |  ESC  |  LBKT |  RBKT |LBRACE |RBRACE |   \   |----------|       |       | UARW  |       |vscterm|   F7   |   
 // |       |   '   |   -   |   =   |   ~   |   |   |----------|  SPC  | LARW  | DARW  | RARW  |vscterm| ENTER  |   
 // |       |   "   |   _   |   +   |   `   |BTT_10 |----------|       |       |       |       |       |        |   
 // |       |-------|       |       |       |       |----------|       |-------|       |       | BTT11 |        |
@@ -327,7 +327,7 @@
 
                         bindings = <
    &soft_off    &trans         &trans     &trans          &trans           &trans           &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3       &trans
-   &trans       &kp LBKT       &kp RBKT   &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans           &trans          &trans            &kp UARW        &trans         &vscode_term_up    &kp F7       
+   &kp ESC      &kp LBKT       &kp RBKT   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BSLH           &trans          &trans            &kp UARW        &trans         &vscode_term_up    &kp F7       
    &trans       &kp APOS       &kp MINUS  &kp EQUAL       &kp TILDE        &kp PIPE         &kp SPACE       &kp LARW          &kp DARW        &kp RARW       &vscode_term_down  &kp RET     
    &trans      &kp DQT        &kp UNDER  &kp PLUS        &kp GRAVE        &BTT_10           &trans          &trans            &trans          &trans         &trans             &trans  
    &trans       &trans         &trans     &trans          &trans           &trans           &trans          &trans            &trans          &trans         &BTT_11            &trans  
