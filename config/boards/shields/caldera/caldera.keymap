@@ -295,9 +295,9 @@
                 BASE_LOWER {
 // ------------------------------------------------------------------------------------------------------------
 // | BKSP  |  SPC  | ENTER | COPY  |  UNDO |  REDO |----------|       |       |       |       |       |       |   
-// |PREVTAB| VOL DN| VOL UP|ZM OUT | ZM IN |       |----------| BKSP  |   7   |   8   |   9   |   +   |       |   
-// |NEXTTAB|  BTT7 | BTT1  |  BTT7 | BTT10 |       |----------|   0   |   4   |   5   |   6   |   -   |       |   
-// | NEXT  |  BTT2 | BTT3  |       | BTT8  |       |----------|   .   |   1   |   2   |   3   |   =   |       |   
+// |PREVTAB|   &   |   *   |   (   |   )   |       |----------|   +   |   7   |   8   |   9   |   0   |       |   
+// |NEXTTAB|   $   |   %   |   ^   |VOL_UP |       |----------|   -   |   4   |   5   |   6   |   .   |       |   
+// | NEXT  |   !   |   @   |   #   |VOL_DN |       |----------|   =   |   1   |   2   |   3   |  BKSP |       |   
 // | PREV  |SCRSTCP|=======|-------|=======| PAUSE |----------|       |       |-------|       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
@@ -310,9 +310,9 @@
 
                         bindings = <
    &kp BSPC    &kp SPACE     &kp RET       &copy        &undo          &redo             &trans       &trans         &trans   &trans       &trans         &trans
-   &prev_tab   &kp C_VOL_DN  &kp C_VOL_UP  &zoom_out    &zoom_in       &trans            &kp BSPC     &kp N7         &kp N8   &kp N9       &kp PLUS       &trans    
-   &next_tab   &BTT_7        &BTT_1       &BTT_7       &BTT_10         &trans            &kp N0       &kp N4         &kp N5   &kp N6       &kp MINUS      &trans 
-   &kp C_NEXT  &BTT_2        &BTT_3        &trans       &BTT_8         &trans            &kp DOT      &kp N1         &kp N2   &kp N3       &kp EQUAL      &trans   
+   &prev_tab   &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR       &trans            &kp PLUS     &kp N7         &kp N8   &kp N9       &kp N0       &trans    
+   &next_tab   &kp DLLR      &kp PERCENT   &kp CARET    &kp C_VOL_UP   &trans            &kp MINUS    &kp N4         &kp N5   &kp N6       &kp DOT        &trans 
+   &kp C_NEXT  &kp EXCL      &kp AT        &kp HASH     &kp C_VOL_DN   &trans            &kp EQUAL    &kp N1         &kp N2   &kp N3       &kp BSPC       &trans   
    &kp C_PREV  &BTT_4        &trans        &trans       &trans         &kp C_PP          &trans       &trans         &trans   &trans       &trans         &trans   
                         >;
                 };
