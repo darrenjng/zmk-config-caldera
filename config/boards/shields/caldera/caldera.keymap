@@ -320,7 +320,7 @@
 // |PREVTAB|   &   |   *   |   (   |   )   |       |----------|       |       | UARW  |       |vscterm|       |   
 // |NEXTTAB|   $   |   %   |   ^   |VOL_UP |       |----------|  SPC  | LARW  | DARW  | RARW  |vscterm| ENTER |   
 // | NEXT  |   !   |   @   |   #   |VOL_DN |       |----------|       |       |       |       |       |       |   
-// | PREV  |SCRSTCP|=======|-------|=======| PAUSE |----------|       |       |-------|       |       |       |
+// | PAUSE |SCRSTCP|=======|-------|=======|=======|----------|       |       |-------|       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
@@ -328,7 +328,7 @@
    &prev_tab   &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR       &trans            &trans          &trans      &kp UARW    &trans      &vscode_term_up    &trans  
    &next_tab   &kp DLLR      &kp PERCENT   &kp CARET    &kp C_VOL_UP   &trans            &kp SPACE       &kp LARW    &kp DARW    &kp RARW    &vscode_term_down  &kp RET
    &kp C_NEXT  &kp EXCL      &kp AT        &kp HASH     &kp C_VOL_DN   &trans            &trans          &trans      &trans      &trans      &trans             &trans   
-   &kp C_PREV  &BTT_4        &trans        &trans       &trans         &kp C_PP          &trans          &trans      &trans      &trans      &trans            &trans    
+   &kp C_PP    &BTT_4        &trans        &trans       &trans         &trans          &trans          &trans      &trans      &trans      &trans            &trans    
                         >;
                 };
                 CODE {
