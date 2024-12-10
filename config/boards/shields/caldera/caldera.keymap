@@ -5,8 +5,9 @@
 
 #define BASE 0
 #define ALT_BASE 1
-#define BASE_LOWER 2
-#define ALT_BASE_LOWER 3
+#define NUM_PAD 2
+#define RAISE_NUM_PAD 3
+#define CODE 4
 
 / {
     macros {
@@ -268,7 +269,7 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |-----|  Y  |  U  |  I  |  O  |  P  |   \  |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |-----|  H  |  J  |  K  |  L  |  ;  |  ENT |  
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |-----|  N  |  M  |  ,  |  .  |  /  | SHFT |
-// |      | ALOW| SPC | LOW | ALT | CMD |-----| SPC | ALOW| LOW |     |     |      |
+// |      | ALOW| SPC | L 3 | ALT | CMD |-----|SP/L4| L 2 | L 3 |     |     |      |
 // ---------------------------------------------------------------------------------
 
                         bindings = <
@@ -276,7 +277,7 @@
    &kp TAB    &kp Q      &kp W       &kp E      &kp R      &kp T                &kp Y        &kp U   &kp I      &kp O     &kp P     &kp BSLH
    &kp LCTRL   &kp A     &kp S       &kp D      &kp F      &kp G                &kp H        &kp J   &kp K      &kp L     &kp SEMI  &kp RET
    &kp LSHFT  &kp Z      &kp X       &kp C      &kp V      &kp B                &kp N        &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-   &trans     &mo 3      &kp SPACE   &mo 2      &kp LALT   &kp LGUI             &lt 3 SPACE  &mo 3   &mo 2     &trans  &trans    &trans
+   &trans     &mo 3      &kp SPACE   &mo 3      &kp LALT   &kp LGUI             &lt 4 SPACE  &mo 2   &mo 3      &trans    &trans    &trans
                         >;
                 };
                 ALT_BASE {
@@ -296,37 +297,47 @@
    &kp LCTRL  &mo 2  &kp APOS  &kp LALT   &kp LGUI   &kp SPACE             &kp SPACE  &mo 3   &kp LARW   &kp UARW  &kp DARW  &kp RARW
                         >;
                 };
-                BASE_LOWER {
+                NUM_PAD {
+// ------------------------------------------------------------------------------------------------------------
+// |       |       |       |       |       |       |----------|       |       |       |       |       |       |   
+// |       |   +   |   7   |   8   |   9   |   0   |----------|       |       |       |       |       |       |   
+// |       |   -   |   4   |   5   |   6   |   .   |----------|       |       |       |       |       |       |   
+// |       |   =   |   1   |   2   |   3   |  BKSP |----------|       |       |       |       |       |       |   
+// |       |       |       |-------|       |       |----------|       |       |-------|       |       |       |
+// ------------------------------------------------------------------------------------------------------------
+
+                        bindings = <
+   &trans      &trans        &trans        &trans       &trans         &trans            &trans    &trans         &trans   &trans       &trans       &trans
+   &kp PLUS    &kp N7        &kp N8        &kp N9       &kp N0         &trans            &trans    &trans         &trans   &trans       &trans       &trans    
+   &kp MINUS   &kp N4        &kp N5        &kp N6       &kp DOT        &trans            &trans    &trans         &trans   &trans       &trans       &trans 
+   &kp EQUAL   &kp N1        &kp N2        &kp N3       &kp BSPC       &trans            &trans    &trans         &trans   &trans       &trans       &trans   
+   &trans      &trans        &trans        &trans       &trans         &trans            &trans    &trans         &trans   &trans       &trans       &trans   
+                        >;
+                };
+                RAISE_NUM_PAD {
 // ------------------------------------------------------------------------------------------------------------
 // | BKSP  |  SPC  | ENTER | COPY  |  UNDO |  REDO |----------|       |       |       |       |       |       |   
-// |PREVTAB|   &   |   *   |   (   |   )   |       |----------|   +   |   7   |   8   |   9   |   0   |       |   
-// |NEXTTAB|   $   |   %   |   ^   |VOL_UP |       |----------|   -   |   4   |   5   |   6   |   .   |       |   
-// | NEXT  |   !   |   @   |   #   |VOL_DN |       |----------|   =   |   1   |   2   |   3   |  BKSP |       |   
+// |PREVTAB|   &   |   *   |   (   |   )   |       |----------|       |       |       |       |       |       |   
+// |NEXTTAB|   $   |   %   |   ^   |VOL_UP |       |----------|       |       |       |       |       |       |   
+// | NEXT  |   !   |   @   |   #   |VOL_DN |       |----------|       |       |       |       |       |       |   
 // | PREV  |SCRSTCP|=======|-------|=======| PAUSE |----------|       |       |-------|       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
-
-// BTT Map Left
-// --------------------------------------------------------------------
-// | File    | SearchTabsEdge | MissCtrl   | Outlook  | SplitEdge  |
-// | MovScrn |================|------------|==========|            |
-// --------------------------------------------------------------------
-
                         bindings = <
-   &kp BSPC    &kp SPACE     &kp RET       &copy        &undo          &redo             &trans       &trans         &trans   &trans       &trans         &trans
-   &prev_tab   &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR       &trans            &kp PLUS     &kp N7         &kp N8   &kp N9       &kp N0       &trans    
-   &next_tab   &kp DLLR      &kp PERCENT   &kp CARET    &kp C_VOL_UP   &trans            &kp MINUS    &kp N4         &kp N5   &kp N6       &kp DOT        &trans 
-   &kp C_NEXT  &kp EXCL      &kp AT        &kp HASH     &kp C_VOL_DN   &trans            &kp EQUAL    &kp N1         &kp N2   &kp N3       &kp BSPC       &trans   
-   &kp C_PREV  &BTT_4        &trans        &trans       &trans         &kp C_PP          &trans       &trans         &trans   &trans       &trans         &trans   
+   &kp BSPC    &kp SPACE     &kp RET       &copy        &undo          &redo             &trans    &trans         &trans  &trans      &trans     &trans
+   &prev_tab   &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR       &trans            &trans    &trans         &trans  &trans      &trans     &trans 
+   &next_tab   &kp DLLR      &kp PERCENT   &kp CARET    &kp C_VOL_UP   &trans            &trans    &trans         &trans  &trans      &trans     &trans
+   &kp C_NEXT  &kp EXCL      &kp AT        &kp HASH     &kp C_VOL_DN   &trans            &trans    &trans         &trans  &trans      &trans     &trans  
+   &kp C_PREV  &BTT_4        &trans        &trans       &trans         &kp C_PP          &trans    &trans         &trans  &trans      &trans     &trans   
                         >;
                 };
-                ALT_BASE_LOWER {
+                CODE {
 // ------------------------------------------------------------------------------------------------------------
 // |SOFTOFF|       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |========|   
 // |  ESC  |  LBKT |  RBKT |LBRACE |RBRACE |   \   |----------|       |       | UARW  |       |vscterm|   F7   |   
 // |       |   '   |   -   |   =   |   ~   |   |   |----------|  SPC  | LARW  | DARW  | RARW  |vscterm| ENTER  |   
 // |       |   "   |   _   |   +   |   `   |BTT_10 |----------|       |       |       |       |       |        |   
-// |       |-------|       |       |       |       |----------|       |-------|       |       | BTT11 |        |
+// |       |       |       |       |       |       |----------|-------|       |       |       | BTT11 |        |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
