@@ -359,16 +359,16 @@
                 };
                 EXTRA_BTTS {
 // ------------------------------------------------------------------------------------------------------------
-// |       |-------|SCRSTCP|PREVTAB|NEXTTAB|       |----------|       |       |       |   F7  |-------|        |   
-// |       |       |ZOOMOUT|ZOOMIN |       |       |----------|       |       |       |       |       |        |   
+// |       |ZOOMOUT|ZOOMIN |-------|PREVTAB|NEXTTAB|----------|       |       |       |   F7  |-------|        |   
+// |       |       |       |       |SCRSTCP|       |----------|       |       |       |       |       |        |   
 // |       |       |       |       |       |       |----------|       |       |       |       |       |        |   
 // |       |       |       |       |       |       |----------|       |       |       |       |       |        |   
 // |       |       |       |       |       |       |----------|       |       |       |       |       |        |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
-   &trans       &trans      &BTT_4      &prev_tab   &next_tab    &trans                    &trans       &trans      &trans      &kp F7      &trans       &trans
-   &trans       &trans      &zoom_out   &zoom_in    &trans       &trans                    &trans       &trans      &trans      &trans      &trans       &trans
+   &trans       &zoom_out   &zoom_in    &trans      &prev_tab    &next_tab                 &trans       &trans      &trans      &kp F7      &trans       &trans
+   &trans       &trans      &trans      &trans      &BTT_4       &trans                    &trans       &trans      &trans      &trans      &trans       &trans
    &trans       &trans      &trans      &trans      &trans       &trans                    &trans       &trans      &trans      &trans      &trans       &trans
    &trans       &trans      &trans      &trans      &trans       &trans                    &trans       &trans      &trans      &trans      &trans       &trans 
    &trans       &trans      &trans      &trans      &trans       &trans                    &trans       &trans      &trans      &trans      &trans       &trans  
