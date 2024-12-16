@@ -266,27 +266,51 @@
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&BTT_3>, <&BTT_11>;
+                bindings = <&BTT_11>, <&BTT_12>;
+            };
+            ht_hp: hold_tap { 
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <400>;
+                quick-tap-ms = <200>;
+                bindings = <&kp>, <&kp>;
+            };
+            ht_hp_0: hold_tap_0 { 
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <400>;
+                quick-tap-ms = <200>;
+                bindings = <&mo 5>, <&BTT_3>;
+            };
+            ht_hp_1: hold_tap_1 { 
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <400>;
+                quick-tap-ms = <200>;
+                bindings = <&mo 5>, <&BTT_8>;
             };
         };
         keymap {     
                 compatible = "zmk,keymap";
 
                 BASE {
-// --------------------------------------------------------------------------------------
-// |  ESC |BTT1/L5| BTT2| BTT3|BTT11| BTT5|-----| BTT6| BTT7| BTT8| BTT9|BTT10/L5| BKSP |
-// |  TAB |   Q   |  W  |  E  |  R  |  T  |-----|  Y  |  U  |  I  |  O  |   P    |   \  |
-// | CTRL |   A   |  S  |  D  |  F  |  G  |-----|  H  |  J  |  K  |  L  |   ;    |  ENT |  
-// | SHFT |   Z   |  X  |  C  |  V  |  B  |-----|  N  |  M  |  ,  |  .  |   /    | SHFT |
-// |      |  ALOW | SPC | L 3 | ALT | CMD |-----|SP/L4| L 2 | L 3 |     |        |      |
-// --------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
+// |  ESC |BTT1 | BTT2| BTT3/L5|BTT11/12| BTT5|-----| BTT6| BTT7| BTT8/L5| BTT9|BTT10| BKSP |
+// |  TAB |  Q  |  W  |    E   |   R    |  T  |-----|  Y  |  U  |    I   |  O  |  P  |   \  |
+// | CTRL |  A  |  S  |    D   |   F    |  G  |-----|  H  |  J  |    K   |  L  |  ;  |  ENT |  
+// | SHFT |  Z  |  X  |    C   |   V    |  B  |-----|  N  |  M  |    ,   |  .  |  /  | SHFT |
+// |      | ALOW| SPC |   L 3  |  ALT   | CMD |-----|SP/L4| L 2 |   L 3  |     |     |      |
+// ------------------------------------------------------------------------------------------
 
                         bindings = <
-   &kp ESC    &BTT_1   &BTT_2      &mo 5      &td0       &BTT_5               &BTT_6       &BTT_7  &BTT_8     &BTT_9    &lt 5 &BTT_10   &kp BSPC
-   &kp TAB    &kp Q    &kp W       &kp E      &kp R      &kp T                &kp Y        &kp U   &kp I      &kp O     &kp P           &kp BSLH
-   &kp LCTRL  &kp A    &kp S       &kp D      &kp F      &kp G                &kp H        &kp J   &kp K      &kp L     &kp SEMI        &kp RET
-   &kp LSHFT  &kp Z    &kp X       &kp C      &kp V      &kp B                &kp N        &kp M   &kp COMMA  &kp DOT   &kp FSLH        &kp RSHFT
-   &trans     &mo 3    &kp SPACE   &mo 3      &kp LALT   &kp LGUI             &lt 4 SPACE  &mo 2   &mo 3      &trans    &trans          &trans
+   &kp ESC    &BTT_1    &BTT_2      &ht_hp_0   &td0       &BTT_5               &BTT_6          &BTT_7  &ht_hp_1   &BTT_9    &BTT_10    &kp BSPC
+   &kp TAB    &kp Q     &kp W       &kp E      &kp R      &kp T                &kp Y           &kp U   &kp I      &kp O     &kp P      &kp BSLH
+   &kp LCTRL  &kp A     &kp S       &kp D      &kp F      &kp G                &kp H           &kp J   &kp K      &kp L     &kp SEMI   &kp RET
+   &kp LSHFT  &kp Z     &kp X       &kp C      &kp V      &kp B                &kp N           &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
+   &trans     &mo 3     &kp SPACE   &mo 3      &kp LALT   &kp LGUI             &ht_hp 4 SPACE  &mo 2   &mo 3      &trans    &trans     &trans
                         >;
                 };
                 ALT_BASE {
@@ -359,7 +383,7 @@
                 };
                 EXTRA_BTTS {
 // ------------------------------------------------------------------------------------------------------------
-// |       |ZOOMOUT|ZOOMIN |-------|PREVTAB|NEXTTAB|----------|       |       |       |   F7  |-------|        |   
+// |       |ZOOMOUT|ZOOMIN |-------|PREVTAB|NEXTTAB|----------|       |       |-------|   F7  |       |        |   
 // |       |       |       |       |SCRSTCP|       |----------|       |       |       |       |       |        |   
 // |       |       |       |       |       |       |----------|       |       |       |       |       |        |   
 // |       |       |       |       |       |       |----------|       |       |       |       |       |        |   
