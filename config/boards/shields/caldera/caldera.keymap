@@ -282,7 +282,7 @@
                 flavor = "hold-preferred";
                 tapping-term-ms = <400>;
                 quick-tap-ms = <200>;
-                bindings = <&mo>, <&>;
+                bindings = <&mo>, <&BTT_3>;
             };
             ht_hp_1: hold_tap_1 { 
                 compatible = "zmk,behavior-hold-tap";
@@ -290,7 +290,7 @@
                 flavor = "hold-preferred";
                 tapping-term-ms = <400>;
                 quick-tap-ms = <200>;
-                bindings = <&mo>, <&>;
+                bindings = <&mo>, <&BTT_8>;
             };
         };
         keymap {     
@@ -306,7 +306,7 @@
 // ------------------------------------------------------------------------------------------
 
                         bindings = <
-   &kp ESC    &BTT_1    &BTT_2      &ht_hp_0 5 BTT_3   &td0       &BTT_5               &BTT_6          &BTT_7  &ht_hp_1 5 BTT_8   &BTT_9    &BTT_10    &kp BSPC
+   &kp ESC    &BTT_1    &BTT_2      &ht_hp_0 5 0   &td0       &BTT_5               &BTT_6          &BTT_7  &ht_hp_1 5 0   &BTT_9    &BTT_10    &kp BSPC
    &kp TAB    &kp Q     &kp W       &kp E        &kp R      &kp T                &kp Y           &kp U   &kp I        &kp O     &kp P      &kp BSLH
    &kp LCTRL  &kp A     &kp S       &kp D        &kp F      &kp G                &kp H           &kp J   &kp K        &kp L     &kp SEMI   &kp RET
    &kp LSHFT  &kp Z     &kp X       &kp C        &kp V      &kp B                &kp N           &kp M   &kp COMMA    &kp DOT   &kp FSLH   &kp RSHFT
