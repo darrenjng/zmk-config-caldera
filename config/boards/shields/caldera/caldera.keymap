@@ -274,7 +274,7 @@
                 flavor = "hold-preferred";
                 tapping-term-ms = <400>;
                 quick-tap-ms = <200>;
-                bindings = <&kp>, <&kp>;
+                bindings = <&mo>, <&kp>;
             };
             ht_hp_0: hold_tap_0 { 
                 compatible = "zmk,behavior-hold-tap";
