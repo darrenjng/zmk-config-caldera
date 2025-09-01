@@ -333,16 +333,16 @@
                 NUM_PAD {
 // ------------------------------------------------------------------------------------------------------------
 // |       |       |       |       |       |       |----------|       |       |       |       |       |       |   
-// |       |  BKSP |   7   |   8   |   9   |   +   |----------|       |       | UARW  |       |vscterm|       |   
-// |       |   0   |   4   |   5   |   6   |   -   |----------|  SPC  | LARW  | DARW  | RARW  |vscterm| ENTER |   
+// |       |  BKSP |   7   |   8   |   9   |   +   |----------|       |       |       |       |       |       |   
+// |       |   0   |   4   |   5   |   6   |   -   |----------|  SPC  | DARW  | UARW  | LARW  | RARW  | ENTER |   
 // |       |   .   |   1   |   2   |   3   |   =   |----------|       |       |       |       |       |       |   
 // |       |       |       |       |       |       |----------|       |       |-------|       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
     &trans    &trans      &trans        &trans        &trans       &trans                      &trans          &trans      &trans      &trans      &trans             &trans
-    &trans    &kp BSPC    &kp N7        &kp N8        &kp N9       &kp PLUS                    &trans          &trans      &kp UARW    &trans      &vscode_term_up    &trans     
-    &trans    &kp N0      &kp N4        &kp N5        &kp N6       &kp MINUS                   &kp SPACE       &kp LARW    &kp DARW    &kp RARW    &vscode_term_down  &kp RET 
+    &trans    &kp BSPC    &kp N7        &kp N8        &kp N9       &kp PLUS                    &trans          &trans      &kp UARW    &trans      &trans    &trans     
+    &trans    &kp N0      &kp N4        &kp N5        &kp N6       &kp MINUS                   &kp SPACE       &kp DARW          &kp UARW        &kp LARW      &kp RARW  &kp RET 
     &trans    &kp DOT     &kp N1        &kp N2        &kp N3       &kp EQUAL                   &trans          &trans      &trans      &trans      &trans             &trans    
     &trans    &trans      &trans        &trans        &trans       &trans                      &trans          &trans      &trans      &trans      &trans            &trans    
                         >;
@@ -350,16 +350,16 @@
                 RAISE_NUM_PAD {
 // ------------------------------------------------------------------------------------------------------------
 // | BKSP  |  SPC  | ENTER | COPY  |  UNDO |  REDO |----------|       |       |       |       |       |       |   
-// |       |   &   |   *   |   (   |   )   |       |----------|       |       | UARW  |       |vscterm|       |   
-// | NEXT  |   $   |   %   |   ^   |VOL_UP |       |----------|  SPC  | LARW  | DARW  | RARW  |vscterm| ENTER |   
+// |       |   &   |   *   |   (   |   )   |       |----------|       |       |       |       |       |       |   
+// | NEXT  |   $   |   %   |   ^   |VOL_UP |       |----------|  SPC  | DARW  | UARW  | LARW  | RARW  | ENTER |   
 // | PREV  |   !   |   @   |   #   |VOL_DN |       |----------|       |       |       |       |       |       |   
 // | PAUSE |       |=======|-------|=======|=======|----------|       |       |-------|       |       |       |
 // ------------------------------------------------------------------------------------------------------------
 
                         bindings = <
    &kp BSPC    &kp SPACE     &kp RET       &copy        &undo          &redo                  &trans          &trans      &trans      &trans      &trans             &trans
-   &trans      &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR       &trans                 &trans          &trans      &kp UARW    &trans      &vscode_term_up    &trans  
-   &kp C_NEXT  &kp DLLR      &kp PERCENT   &kp CARET    &kp C_VOL_UP   &trans                 &kp SPACE       &kp LARW    &kp DARW    &kp RARW    &vscode_term_down  &kp RET
+   &trans      &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR       &trans                 &trans          &trans      &kp UARW    &trans      &trans    &trans  
+   &kp C_NEXT  &kp DLLR      &kp PERCENT   &kp CARET    &kp C_VOL_UP   &trans                 &kp SPACE       &kp DARW          &kp UARW        &kp LARW      &kp RARW  &kp RET
    &kp C_PREV  &kp EXCL      &kp AT        &kp HASH     &kp C_VOL_DN   &trans                 &trans          &trans      &trans      &trans      &trans             &trans   
    &kp C_PP    &BTT_4        &trans        &trans       &trans         &trans                 &trans          &trans      &trans      &trans      &trans            &trans    
                         >;
@@ -367,8 +367,8 @@
                 CODE {
 // ------------------------------------------------------------------------------------------------------------
 // |SOFTOFF|       |       |       |       |       |----------|TOGLAYR|  BT1  |  BT2  |  BT3  |  BT4  |========|   
-// |  ESC  |  LBKT |  RBKT |LBRACE |RBRACE |   \   |----------|       |       | UARW  |       |       |        |   
-// |       |   '   |   -   |   =   |   ~   |   |   |----------|  SPC  | LARW  | DARW  | RARW  |       | ENTER  |   
+// |  ESC  |  LBKT |  RBKT |LBRACE |RBRACE |   \   |----------|       |       |       |       |       |        |   
+// |       |   '   |   -   |   =   |   ~   |   |   |----------|  SPC  | DARW  | UARW  | LARW  | RARW  | ENTER  |   
 // |       |   "   |   _   |   +   |   `   |       |----------|       |       |       |       |       |        |   
 // |       |       |       |       |       |       |----------|-------|       |       |       | BTT11 |        |
 // ------------------------------------------------------------------------------------------------------------
@@ -376,7 +376,7 @@
                         bindings = <
    &soft_off    &trans         &trans     &trans          &trans           &trans               &tog 1          &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3       &trans
    &kp ESC      &kp LBKT       &kp RBKT   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BSLH             &trans          &trans            &trans        &trans         &trans    &kp F7       
-   &trans       &kp APOS       &kp MINUS  &kp EQUAL       &kp TILDE        &kp PIPE             &kp SPACE       &kp DARW          &kp UARW        &kp LARW       &kp RARW  &kp RET     
+   &trans       &kp APOS       &kp MINUS  &kp EQUAL       &kp TILDE        &kp PIPE             &kp SPACE       &kp DARW          &kp UARW        &kp LARW      &kp RARW  &kp RET     
    &trans       &kp DQT        &kp UNDER  &kp PLUS        &kp GRAVE        &trans               &trans          &trans            &trans          &trans         &trans             &trans  
    &trans       &trans         &trans     &trans          &trans           &trans               &trans          &trans            &trans          &trans         &trans            &trans  
                         >;
