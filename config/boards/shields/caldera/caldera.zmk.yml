@@ -3,7 +3,7 @@ id: caldera
 name: caldera
 type: shield
 url: https://github.com/darrenjng/zmk-config-caldera
-requires: [nice_nano_v2, i2c_oled]
+requires: [nice_nano, i2c_oled]
 exposes: [nice_view_header]
 features:
   - keys
